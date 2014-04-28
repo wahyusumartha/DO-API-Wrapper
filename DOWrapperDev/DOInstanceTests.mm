@@ -15,8 +15,11 @@ using namespace Cedar::Matchers;
 describe(@"DOInstance", ^{
     __block DOClient *client;
     
+    static NSString * clientId = @"c8b7f61fafa01d1215f7cb82ac6b10a2";
+    static NSString * apiKey = @"4c3467743922444409ef34e4fadfcc45";
+    
     beforeEach(^{
-        client = [DOClient singleton];
+        client = [DOClient startWithClientId:clientId apiKey:apiKey];
     });
     
     it(@"DOClient should not be nil", ^{
@@ -25,19 +28,16 @@ describe(@"DOInstance", ^{
    
     context(@"when the object initialize with clientId and APIKey", ^{
         
-        beforeEach(^{
-            client = [DOClient startWithClientId:@"c8b7f61fafa01d1215f7cb82ac6b10a2" apiKey:@"4c3467743922444409ef34e4fadfcc45"];
-        });
-        
         it(@"clientId should match", ^{
-            client.clientId should equal(@"c8b7f61fafa01d1215f7cb82ac6b10a2");
+            client.clientId should equal(clientId);
         });
         
         it(@"apiKey should match", ^{
-            client.apiKey should equal(@"4c3467743922444409ef34e4fadfcc45");
+            client.apiKey should equal(apiKey);
         });
         
     });
+    
 });
 
 
