@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DOSingleton.h"
 
 @interface DOClient : NSObject
+
+@property (nonatomic, copy) NSString *clientId;
+@property (nonatomic, copy) NSString *apiKey;
+
+do_declare_singleton(DOClient);
+
++ (DOClient *)startWithClientId:(NSString *)clientId apiKey:(NSString *)apiKey;
 
 @end

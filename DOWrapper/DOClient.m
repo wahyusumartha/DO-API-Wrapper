@@ -10,4 +10,18 @@
 
 @implementation DOClient
 
+do_synthesize_singleton(DOClient);
+
++ (DOClient *)startWithClientId:(NSString *)clientId apiKey:(NSString *)apiKey
+{
+    DOClient *doInstance = [self singleton];
+    
+    if (doInstance) {
+        doInstance.clientId  = clientId;
+        doInstance.apiKey = apiKey;
+    }
+    
+    return doInstance;
+}
+
 @end

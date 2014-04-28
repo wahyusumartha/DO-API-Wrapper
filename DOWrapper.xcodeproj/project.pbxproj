@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3173AC13CCF340EEBD02ED24 /* libPods-DOWrapperDev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6829DDCB9DBA459DB77B1B71 /* libPods-DOWrapperDev.a */; };
 		EB1BC200190E8EB900C1E231 /* CedarTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = EB1BC1FF190E8EB900C1E231 /* CedarTest.mm */; };
+		EB1BC205190E912D00C1E231 /* DOInstanceTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = EB1BC204190E912D00C1E231 /* DOInstanceTests.mm */; };
+		EB1BC208190E923200C1E231 /* DOClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1BC207190E923200C1E231 /* DOClient.m */; };
 		EB206170190E883900593D58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB20616F190E883900593D58 /* Foundation.framework */; };
 		EB206172190E883900593D58 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB206171190E883900593D58 /* CoreGraphics.framework */; };
 		EB206174190E883900593D58 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB206173190E883900593D58 /* UIKit.framework */; };
@@ -36,6 +38,10 @@
 		6829DDCB9DBA459DB77B1B71 /* libPods-DOWrapperDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DOWrapperDev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BDC658E47A8411391EBB377 /* Pods-DOWrapperDev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DOWrapperDev.xcconfig"; path = "Pods/Pods-DOWrapperDev.xcconfig"; sourceTree = "<group>"; };
 		EB1BC1FF190E8EB900C1E231 /* CedarTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CedarTest.mm; sourceTree = "<group>"; };
+		EB1BC204190E912D00C1E231 /* DOInstanceTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DOInstanceTests.mm; sourceTree = "<group>"; };
+		EB1BC206190E923200C1E231 /* DOClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOClient.h; sourceTree = "<group>"; };
+		EB1BC207190E923200C1E231 /* DOClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOClient.m; sourceTree = "<group>"; };
+		EB1BC20A190E945B00C1E231 /* DOSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSingleton.h; sourceTree = "<group>"; };
 		EB20616C190E883900593D58 /* DOWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DOWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB20616F190E883900593D58 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EB206171190E883900593D58 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -80,6 +86,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB1BC202190E90A300C1E231 /* DigitalOceanAPI */ = {
+			isa = PBXGroup;
+			children = (
+				EB1BC206190E923200C1E231 /* DOClient.h */,
+				EB1BC207190E923200C1E231 /* DOClient.m */,
+			);
+			name = DigitalOceanAPI;
+			sourceTree = "<group>";
+		};
+		EB1BC203190E90AC00C1E231 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				EB20617E190E883A00593D58 /* AppDelegate.h */,
+				EB20617F190E883A00593D58 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		EB1BC209190E943900C1E231 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EB1BC20A190E945B00C1E231 /* DOSingleton.h */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		EB206163190E883900593D58 = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +148,9 @@
 		EB206175190E883900593D58 /* DOWrapper */ = {
 			isa = PBXGroup;
 			children = (
-				EB20617E190E883A00593D58 /* AppDelegate.h */,
-				EB20617F190E883A00593D58 /* AppDelegate.m */,
+				EB1BC209190E943900C1E231 /* Utilities */,
+				EB1BC203190E90AC00C1E231 /* AppDelegate */,
+				EB1BC202190E90A300C1E231 /* DigitalOceanAPI */,
 				EB206181190E883A00593D58 /* Images.xcassets */,
 				EB206176190E883900593D58 /* Supporting Files */,
 			);
@@ -140,6 +173,7 @@
 			children = (
 				EB2061B7190E8DCC00593D58 /* Supporting Files */,
 				EB1BC1FF190E8EB900C1E231 /* CedarTest.mm */,
+				EB1BC204190E912D00C1E231 /* DOInstanceTests.mm */,
 			);
 			path = DOWrapperDev;
 			sourceTree = "<group>";
@@ -284,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB1BC208190E923200C1E231 /* DOClient.m in Sources */,
 				EB206180190E883A00593D58 /* AppDelegate.m in Sources */,
 				EB20617C190E883A00593D58 /* main.m in Sources */,
 			);
@@ -294,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB1BC200190E8EB900C1E231 /* CedarTest.mm in Sources */,
+				EB1BC205190E912D00C1E231 /* DOInstanceTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
