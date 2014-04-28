@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>DOWrapperTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>EB206186190E883A00593D58</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB20619E190E8BA900593D58</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB2061B1190E8DCC00593D58</key>
 		<dict>
 			<key>primary</key>
 			<true/>

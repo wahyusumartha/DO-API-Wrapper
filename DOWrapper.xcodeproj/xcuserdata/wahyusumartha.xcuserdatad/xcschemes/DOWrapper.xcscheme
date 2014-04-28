@@ -38,6 +38,16 @@
                ReferencedContainer = "container:DOWrapper.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EB2061B1190E8DCC00593D58"
+               BuildableName = "DOWrapperDev.xctest"
+               BlueprintName = "DOWrapperDev"
+               ReferencedContainer = "container:DOWrapper.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

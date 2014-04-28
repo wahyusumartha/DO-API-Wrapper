@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3173AC13CCF340EEBD02ED24 /* libPods-DOWrapperDev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6829DDCB9DBA459DB77B1B71 /* libPods-DOWrapperDev.a */; };
+		EB1BC200190E8EB900C1E231 /* CedarTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = EB1BC1FF190E8EB900C1E231 /* CedarTest.mm */; };
 		EB206170190E883900593D58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB20616F190E883900593D58 /* Foundation.framework */; };
 		EB206172190E883900593D58 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB206171190E883900593D58 /* CoreGraphics.framework */; };
 		EB206174190E883900593D58 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB206173190E883900593D58 /* UIKit.framework */; };
@@ -14,15 +16,14 @@
 		EB20617C190E883A00593D58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB20617B190E883A00593D58 /* main.m */; };
 		EB206180190E883A00593D58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB20617F190E883A00593D58 /* AppDelegate.m */; };
 		EB206182190E883A00593D58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB206181190E883A00593D58 /* Images.xcassets */; };
-		EB206189190E883A00593D58 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB206188190E883A00593D58 /* XCTest.framework */; };
-		EB20618A190E883A00593D58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB20616F190E883900593D58 /* Foundation.framework */; };
-		EB20618B190E883A00593D58 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB206173190E883900593D58 /* UIKit.framework */; };
-		EB206193190E883A00593D58 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB206191190E883A00593D58 /* InfoPlist.strings */; };
-		EB206195190E883A00593D58 /* DOWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB206194190E883A00593D58 /* DOWrapperTests.m */; };
+		EB2061B3190E8DCC00593D58 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB206188190E883A00593D58 /* XCTest.framework */; };
+		EB2061B4190E8DCC00593D58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB20616F190E883900593D58 /* Foundation.framework */; };
+		EB2061B5190E8DCC00593D58 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB206173190E883900593D58 /* UIKit.framework */; };
+		EB2061BB190E8DCC00593D58 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB2061B9190E8DCC00593D58 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EB20618C190E883A00593D58 /* PBXContainerItemProxy */ = {
+		EB2061BF190E8DCC00593D58 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EB206164190E883900593D58 /* Project object */;
 			proxyType = 1;
@@ -32,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6829DDCB9DBA459DB77B1B71 /* libPods-DOWrapperDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DOWrapperDev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BDC658E47A8411391EBB377 /* Pods-DOWrapperDev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DOWrapperDev.xcconfig"; path = "Pods/Pods-DOWrapperDev.xcconfig"; sourceTree = "<group>"; };
+		EB1BC1FF190E8EB900C1E231 /* CedarTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CedarTest.mm; sourceTree = "<group>"; };
 		EB20616C190E883900593D58 /* DOWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DOWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB20616F190E883900593D58 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EB206171190E883900593D58 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -43,11 +47,12 @@
 		EB20617E190E883A00593D58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EB20617F190E883A00593D58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EB206181190E883A00593D58 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		EB206187190E883A00593D58 /* DOWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DOWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB206188190E883A00593D58 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		EB206190190E883A00593D58 /* DOWrapperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DOWrapperTests-Info.plist"; sourceTree = "<group>"; };
-		EB206192190E883A00593D58 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		EB206194190E883A00593D58 /* DOWrapperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOWrapperTests.m; sourceTree = "<group>"; };
+		EB2061AD190E8BA900593D58 /* DOWrapper copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DOWrapper copy-Info.plist"; path = "/Volumes/Macintosh HD/Users/wahyusumartha/Documents/Mobile Project/iOS/DOWrapper/DOWrapper copy-Info.plist"; sourceTree = "<absolute>"; };
+		EB2061B2190E8DCC00593D58 /* DOWrapperDev.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DOWrapperDev.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB2061B8190E8DCC00593D58 /* DOWrapperDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DOWrapperDev-Info.plist"; sourceTree = "<group>"; };
+		EB2061BA190E8DCC00593D58 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EB2061BE190E8DCC00593D58 /* DOWrapperDev-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DOWrapperDev-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +66,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB206184190E883A00593D58 /* Frameworks */ = {
+		EB2061AF190E8DCC00593D58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB206189190E883A00593D58 /* XCTest.framework in Frameworks */,
-				EB20618B190E883A00593D58 /* UIKit.framework in Frameworks */,
-				EB20618A190E883A00593D58 /* Foundation.framework in Frameworks */,
+				EB2061B3190E8DCC00593D58 /* XCTest.framework in Frameworks */,
+				EB2061B5190E8DCC00593D58 /* UIKit.framework in Frameworks */,
+				EB2061B4190E8DCC00593D58 /* Foundation.framework in Frameworks */,
+				3173AC13CCF340EEBD02ED24 /* libPods-DOWrapperDev.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,9 +84,11 @@
 			isa = PBXGroup;
 			children = (
 				EB206175190E883900593D58 /* DOWrapper */,
-				EB20618E190E883A00593D58 /* DOWrapperTests */,
+				EB2061B6190E8DCC00593D58 /* DOWrapperDev */,
 				EB20616E190E883900593D58 /* Frameworks */,
 				EB20616D190E883900593D58 /* Products */,
+				EB2061AD190E8BA900593D58 /* DOWrapper copy-Info.plist */,
+				8BDC658E47A8411391EBB377 /* Pods-DOWrapperDev.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				EB20616C190E883900593D58 /* DOWrapper.app */,
-				EB206187190E883A00593D58 /* DOWrapperTests.xctest */,
+				EB2061B2190E8DCC00593D58 /* DOWrapperDev.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +108,7 @@
 				EB206171190E883900593D58 /* CoreGraphics.framework */,
 				EB206173190E883900593D58 /* UIKit.framework */,
 				EB206188190E883A00593D58 /* XCTest.framework */,
+				6829DDCB9DBA459DB77B1B71 /* libPods-DOWrapperDev.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,20 +135,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EB20618E190E883A00593D58 /* DOWrapperTests */ = {
+		EB2061B6190E8DCC00593D58 /* DOWrapperDev */ = {
 			isa = PBXGroup;
 			children = (
-				EB206194190E883A00593D58 /* DOWrapperTests.m */,
-				EB20618F190E883A00593D58 /* Supporting Files */,
+				EB2061B7190E8DCC00593D58 /* Supporting Files */,
+				EB1BC1FF190E8EB900C1E231 /* CedarTest.mm */,
 			);
-			path = DOWrapperTests;
+			path = DOWrapperDev;
 			sourceTree = "<group>";
 		};
-		EB20618F190E883A00593D58 /* Supporting Files */ = {
+		EB2061B7190E8DCC00593D58 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EB206190190E883A00593D58 /* DOWrapperTests-Info.plist */,
-				EB206191190E883A00593D58 /* InfoPlist.strings */,
+				EB2061B8190E8DCC00593D58 /* DOWrapperDev-Info.plist */,
+				EB2061B9190E8DCC00593D58 /* InfoPlist.strings */,
+				EB2061BE190E8DCC00593D58 /* DOWrapperDev-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -164,22 +174,24 @@
 			productReference = EB20616C190E883900593D58 /* DOWrapper.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EB206186190E883A00593D58 /* DOWrapperTests */ = {
+		EB2061B1190E8DCC00593D58 /* DOWrapperDev */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EB20619B190E883A00593D58 /* Build configuration list for PBXNativeTarget "DOWrapperTests" */;
+			buildConfigurationList = EB2061C1190E8DCC00593D58 /* Build configuration list for PBXNativeTarget "DOWrapperDev" */;
 			buildPhases = (
-				EB206183190E883A00593D58 /* Sources */,
-				EB206184190E883A00593D58 /* Frameworks */,
-				EB206185190E883A00593D58 /* Resources */,
+				605B2FDCCFDF488CB74818C2 /* Check Pods Manifest.lock */,
+				EB2061AE190E8DCC00593D58 /* Sources */,
+				EB2061AF190E8DCC00593D58 /* Frameworks */,
+				EB2061B0190E8DCC00593D58 /* Resources */,
+				F0ED5003C58C4931AA8AC417 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EB20618D190E883A00593D58 /* PBXTargetDependency */,
+				EB2061C0190E8DCC00593D58 /* PBXTargetDependency */,
 			);
-			name = DOWrapperTests;
-			productName = DOWrapperTests;
-			productReference = EB206187190E883A00593D58 /* DOWrapperTests.xctest */;
+			name = DOWrapperDev;
+			productName = DOWrapperDev;
+			productReference = EB2061B2190E8DCC00593D58 /* DOWrapperDev.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -191,7 +203,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Wahyu Sumartha ";
 				TargetAttributes = {
-					EB206186190E883A00593D58 = {
+					EB2061B1190E8DCC00593D58 = {
 						TestTargetID = EB20616B190E883900593D58;
 					};
 				};
@@ -209,7 +221,7 @@
 			projectRoot = "";
 			targets = (
 				EB20616B190E883900593D58 /* DOWrapper */,
-				EB206186190E883A00593D58 /* DOWrapperTests */,
+				EB2061B1190E8DCC00593D58 /* DOWrapperDev */,
 			);
 		};
 /* End PBXProject section */
@@ -224,15 +236,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB206185190E883A00593D58 /* Resources */ = {
+		EB2061B0190E8DCC00593D58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB206193190E883A00593D58 /* InfoPlist.strings in Resources */,
+				EB2061BB190E8DCC00593D58 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		605B2FDCCFDF488CB74818C2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0ED5003C58C4931AA8AC417 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-DOWrapperDev-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB206168190E883900593D58 /* Sources */ = {
@@ -244,21 +289,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB206183190E883A00593D58 /* Sources */ = {
+		EB2061AE190E8DCC00593D58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB206195190E883A00593D58 /* DOWrapperTests.m in Sources */,
+				EB1BC200190E8EB900C1E231 /* CedarTest.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EB20618D190E883A00593D58 /* PBXTargetDependency */ = {
+		EB2061C0190E8DCC00593D58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EB20616B190E883900593D58 /* DOWrapper */;
-			targetProxy = EB20618C190E883A00593D58 /* PBXContainerItemProxy */;
+			targetProxy = EB2061BF190E8DCC00593D58 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -271,10 +316,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		EB206191190E883A00593D58 /* InfoPlist.strings */ = {
+		EB2061B9190E8DCC00593D58 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EB206192190E883A00593D58 /* en */,
+				EB2061BA190E8DCC00593D58 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -378,8 +423,9 @@
 			};
 			name = Release;
 		};
-		EB20619C190E883A00593D58 /* Debug */ = {
+		EB2061C2190E8DCC00593D58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BDC658E47A8411391EBB377 /* Pods-DOWrapperDev.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DOWrapper.app/DOWrapper";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -388,20 +434,21 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DOWrapper/DOWrapper-Prefix.pch";
+				GCC_PREFIX_HEADER = "DOWrapperDev/DOWrapperDev-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "DOWrapperTests/DOWrapperTests-Info.plist";
+				INFOPLIST_FILE = "DOWrapperDev/DOWrapperDev-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
-		EB20619D190E883A00593D58 /* Release */ = {
+		EB2061C3190E8DCC00593D58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BDC658E47A8411391EBB377 /* Pods-DOWrapperDev.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DOWrapper.app/DOWrapper";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -410,8 +457,8 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DOWrapper/DOWrapper-Prefix.pch";
-				INFOPLIST_FILE = "DOWrapperTests/DOWrapperTests-Info.plist";
+				GCC_PREFIX_HEADER = "DOWrapperDev/DOWrapperDev-Prefix.pch";
+				INFOPLIST_FILE = "DOWrapperDev/DOWrapperDev-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -437,14 +484,16 @@
 				EB20619A190E883A00593D58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		EB20619B190E883A00593D58 /* Build configuration list for PBXNativeTarget "DOWrapperTests" */ = {
+		EB2061C1190E8DCC00593D58 /* Build configuration list for PBXNativeTarget "DOWrapperDev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EB20619C190E883A00593D58 /* Debug */,
-				EB20619D190E883A00593D58 /* Release */,
+				EB2061C2190E8DCC00593D58 /* Debug */,
+				EB2061C3190E8DCC00593D58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
