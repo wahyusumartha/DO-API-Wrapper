@@ -7,16 +7,19 @@
 //
 
 #import "DOClient.h"
+#import "DOWrapperTestHelper.h"
+#import <AFNetworking/AFHTTPRequestOperationManager.h>
 
 SPEC_BEGIN(DOInstanceTests)
 
 using namespace Cedar::Matchers;
+using namespace Cedar::Doubles;
 
 describe(@"DOInstance", ^{
     __block DOClient *client;
     
-    static NSString * clientId = @"c8b7f61fafa01d1215f7cb82ac6b10a2";
-    static NSString * apiKey = @"4c3467743922444409ef34e4fadfcc45";
+    static NSString * clientId = @"c8b7f61fafa01d1215f7cb82ac6b10a81";
+    static NSString * apiKey = @"cb93ceb6b0b6c1be901d834139d3cc832";
     
     beforeEach(^{
         client = [DOClient startWithClientId:clientId apiKey:apiKey];
@@ -36,6 +39,27 @@ describe(@"DOInstance", ^{
             client.apiKey should equal(apiKey);
         });
         
+    });
+    
+    context(@"when the object is request get method", ^{
+
+        it(@"should return 200", ^{
+            
+            StartBlock();
+            
+            [client getRequest:@"droplets" params:[NSDictionary dictionaryWithObjectsAndKeys:clientId, @"client_id",
+                                                  apiKey, @"api_key",nil] success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                EndBlock();
+                [[operation response] statusCode] should equal(200);
+                
+            } failure:^(NSError *error) {
+                EndBlock();
+                fail(@"Request Failed - it should return 200");
+            }];
+            
+            WaitUntilBlockCompletes();
+            
+        });
     });
     
 });
