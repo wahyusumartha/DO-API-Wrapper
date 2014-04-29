@@ -4,18 +4,24 @@
 #import "CDRFunctions.h"
 #import <objc/runtime.h>
 
+@interface UIApplication (PrivateAppleMethods)
+- (void)_terminateWithStatus:(int)status;
+@end
+
 int runSpecsWithinUIApplication() {
     int exitStatus;
 
     BOOL isTestBundle = objc_getClass("SenTestProbe") || objc_getClass("XCTestProbe");
 
-    char *defaultReporterClassName = isTestBundle ? "CDROTestReporter" : "CDRDefaultReporter";
-    NSArray *reporters = CDRReportersFromEnv(defaultReporterClassName);
+    char *defaultReporterClassName = isTestBundle ? "CDROTestReporter,CDRBufferedDefaultReporter" : "CDRDefaultReporter";
+    @autoreleasepool {
+        NSArray *reporters = CDRReportersFromEnv(defaultReporterClassName);
 
-    if (![reporters count]) {
-        exitStatus = -999;
-    } else {
-        exitStatus = runSpecsWithCustomExampleReporters(reporters);
+        if (![reporters count]) {
+            exitStatus = -999;
+        } else {
+            exitStatus = runSpecsWithCustomExampleReporters(reporters);
+        }
     }
 
     return exitStatus;
@@ -23,9 +29,8 @@ int runSpecsWithinUIApplication() {
 
 void exitWithStatusFromUIApplication(int status) {
     UIApplication *application = [UIApplication sharedApplication];
-    SEL _terminateWithStatusSelector = NSSelectorFromString(@"_terminateWithStatus:");
-    if ([application respondsToSelector:_terminateWithStatusSelector]) {
-        [application performSelector:_terminateWithStatusSelector withObject:(id)status];
+    if ([application respondsToSelector:@selector(_terminateWithStatus:)]) {
+        [application _terminateWithStatus:status];
     } else {
         exit(status);
     }

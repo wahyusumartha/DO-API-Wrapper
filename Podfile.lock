@@ -1,10 +1,35 @@
 PODS:
-  - Cedar (0.9.5)
+  - AFNetworking (2.2.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.2.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.2.3):
+    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (2.2.3)
+  - AFNetworking/Security (2.2.3)
+  - AFNetworking/Serialization (2.2.3)
+  - AFNetworking/UIKit (2.2.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Cedar (0.9.6)
 
 DEPENDENCIES:
-  - Cedar
+  - AFNetworking (~> 2.0)
+  - Cedar (from `https://github.com/pivotal/cedar.git`)
+
+EXTERNAL SOURCES:
+  Cedar:
+    :git: https://github.com/pivotal/cedar.git
 
 SPEC CHECKSUMS:
-  Cedar: 16cbb75084031aa41304cdeb0d0c8319c1af1cae
+  AFNetworking: ae513199cca79e9d7af2708ccabe2ed075550c42
+  Cedar: f6bbb969663217e517bf58f6d43d09072cdfbdf2
 
 COCOAPODS: 0.32.1
