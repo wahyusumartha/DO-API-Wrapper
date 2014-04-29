@@ -23,7 +23,7 @@
 #define WaitWhile(condition) \
 do { \
 while(condition) { \
-[[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:0.1]]; \
+[[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]; \
 } \
 } while(0)
 

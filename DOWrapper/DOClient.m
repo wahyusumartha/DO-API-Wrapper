@@ -53,9 +53,12 @@ do_synthesize_singleton(DOClient);
     return urlParams;
 }
 
-- (void)getRequest:(NSString *)url params:(NSDictionary *)dictionary success:(void (^)(AFHTTPRequestOperation*, id))success failure:(void (^)(NSError *))failure
+- (void)getRequest:(NSString *)url
+            params:(NSDictionary *)dictionary
+           success:(void (^)(AFHTTPRequestOperation*, id))success
+           failure:(void (^)(NSError *))failure
 {
-    NSString *requestUrl = [NSString stringWithFormat:@"%@/%@/%@", kDigitalOceanRootURL, url, [self buildUrlParams:dictionary]];
+    NSString *requestUrl = [NSString stringWithFormat:@"%@/%@/%@",kDigitalOceanRootURL, url, [self buildUrlParams:dictionary]];
     
     [self.operationManager GET:requestUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         success(operation, responseObject);

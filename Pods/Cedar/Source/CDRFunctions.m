@@ -35,7 +35,9 @@ NSArray *CDRSelectClasses(BOOL (^classSelectionPredicate)(Class class)) {
         Class class = classes[i];
 
         if (classSelectionPredicate(class)) {
+            [class retain];
             [selectedClasses addObject:class];
+            [class release];
         }
     }
     return selectedClasses;
@@ -85,12 +87,13 @@ NSArray *CDRReporterClassesFromEnv(const char *defaultReporterClassName) {
 
     NSMutableArray *reporterClasses = [NSMutableArray arrayWithCapacity:[reporterClassNames count]];
     for (NSString *reporterClassName in reporterClassNames) {
-        Class reporterClass = NSClassFromString(reporterClassName);
+        Class reporterClass = [NSClassFromString(reporterClassName) retain];
         if (!reporterClass) {
             printf("***** The specified reporter class \"%s\" does not exist. *****\n", [reporterClassName cStringUsingEncoding:NSUTF8StringEncoding]);
             return nil;
         }
         [reporterClasses addObject:reporterClass];
+        [reporterClass release];
     }
     return reporterClasses;
 }
@@ -180,22 +183,24 @@ void CDRMarkXcodeFocusedExamplesInSpecs(NSArray *specs, NSArray *arguments) {
     }
 
     // TODO: should we handle the InvertScope + All case?
-    if ([@"All" isEqual:examplesArgument]) {
+    if ([@[@"Self", @"All"] containsObject:examplesArgument]) {
         return;
     }
 
     NSMutableDictionary *testMethodNamesBySpecClass = [NSMutableDictionary dictionary];
     for (NSString *testName in [examplesArgument componentsSeparatedByString:@","]) {
         NSArray *components = [testName componentsSeparatedByString:@"/"];
-        NSString *specClass = [components objectAtIndex:0];
-        NSString *testMethod = [components objectAtIndex:1];
+        if (components.count > 1) {
+            NSString *specClass = [components objectAtIndex:0];
+            NSString *testMethod = [components objectAtIndex:1];
 
-        NSMutableSet *testMethods = [testMethodNamesBySpecClass objectForKey:specClass];
-        if (!testMethods) {
-            testMethods = [NSMutableSet set];
-            [testMethodNamesBySpecClass setObject:testMethods forKey:specClass];
+            NSMutableSet *testMethods = [testMethodNamesBySpecClass objectForKey:specClass];
+            if (!testMethods) {
+                testMethods = [NSMutableSet set];
+                [testMethodNamesBySpecClass setObject:testMethods forKey:specClass];
+            }
+            [testMethods addObject:testMethod];
         }
-        [testMethods addObject:testMethod];
     }
 
     CDROTestNamer *testNamer = [[CDROTestNamer alloc] init];

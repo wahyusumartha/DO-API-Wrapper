@@ -13,7 +13,6 @@
 SPEC_BEGIN(DOInstanceTests)
 
 using namespace Cedar::Matchers;
-using namespace Cedar::Doubles;
 
 describe(@"DOInstance", ^{
     __block DOClient *client;
@@ -42,21 +41,20 @@ describe(@"DOInstance", ^{
     });
     
     context(@"when the object is request get method", ^{
-
+        
         it(@"should return 200", ^{
-            
+
+            //TODO: fixes the problem for asynchronous test
             StartBlock();
-            
             [client getRequest:@"droplets" params:[NSDictionary dictionaryWithObjectsAndKeys:clientId, @"client_id",
-                                                  apiKey, @"api_key",nil] success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                            apiKey, @"api_key",nil] success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 EndBlock();
                 [[operation response] statusCode] should equal(200);
-                
             } failure:^(NSError *error) {
                 EndBlock();
                 fail(@"Request Failed - it should return 200");
             }];
-            
+
             WaitUntilBlockCompletes();
             
         });
