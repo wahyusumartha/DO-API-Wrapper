@@ -3,4 +3,4 @@ before_install:
   - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
 xcode_workspace: DOWrapper.xcworkspace
 xcode_scheme: DOWrapperTest
-
+xcode_sdk: iphonesimulator7.0
