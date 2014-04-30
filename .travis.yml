@@ -1,5 +1,7 @@
 language: objective-c 
 before_install:
+  - brew update
+  - brew upgrade xctool
   - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
 xcode_workspace: DOWrapper.xcworkspace
 xcode_scheme: DOWrapperTest
